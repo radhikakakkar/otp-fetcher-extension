@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "OTP-retriever",
+  "version": "0.1",
+  "author": "First Last",
+  "description": "This chrome extension allows for the easy retrieval of otp mails from your logged in gmail account",
+  "permissions": [""],
+  "browser_action": {
+    "default_icon": "data/icons/glasses-svgrepo-com.png",
+    "default_popup": "index.html",
+    "default_title": "A tooltip popup description when you hover over the Chrome Extension icon."
+  }
+}
+

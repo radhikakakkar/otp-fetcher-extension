@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OTP Retiever</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- 
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script> -->
+  </head>
+  <body>
+    <script src="scripts.js"></script>
+    <div id="title-container">OTP Retiever</div>
+    <div
+      id="content-container"
+      style="width: 20rem; height: 10rem; margin: 2rem"
+    >
+      <div id="connect-google-account-container">
+        <p id="connect-account-p">
+          Connect Your Google Account to use the feature!
+        </p>
+        <button id="connect-account-btn">Connect</button>
+      </div>
+      <div style="display: none" id="accounts-info-container">
+        <p id="accounts-info-container-p">Click below to fetch the OTPs</p>
+
+        <div id="button-container" class="d-flex justify-content-around">
+          <button id="get-results-btn" class="btn btn-primary">
+            Fetch New OTPs
+          </button>
+          <button id="logout-btn" class="btn btn-primary">Logout</button>
+        </div>
+      </div>
+      <div style="display: none" id="results-div"></div>
+    </div>
+  </body>
+</html>
