@@ -21,11 +21,19 @@ button:hover {
 }
 
 #results-div {
-  margin-top: 3em;
-  border: rgba(0, 0, 0, 0.356) 2px dotted;
+  overflow-y: scroll;
+  margin-top: 4em;
+  font-size: large;
+  /* border: rgba(0, 0, 0, 0.356) 2px dotted; */
   padding: 1em;
   width: 93%;
+  height: 100%;
 }
+
+/* border: black 2px dotted;
+margin-top: 4em;
+margin-bottom: 2em;
+font-size: large; */
 .sender_email {
   font-size: medium;
   font-weight: 600;
@@ -38,20 +46,22 @@ button:hover {
   color: grey;
 }
 .otp {
-  color: #0d6efd;
+  color: #584acc;
   font-weight: 700;
-  margin-top: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0;
 }
 #connect-account-p,
 #accounts-info-container-p {
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 #get-results-btn {
-  background-color: #0d6efd; /* Green */
+  background-color: #584acc; /* Green */
   border: none;
   color: white;
+  font-weight: 500;
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
@@ -59,7 +69,7 @@ button:hover {
   font-size: 16px;
 }
 #connect-account-btn {
-  background-color: #04aa6d; /* Green */
+  background-color: #fb9e74; /* Green */
   border: none;
   color: white;
   padding: 10px 30px;
@@ -69,8 +79,8 @@ button:hover {
   font-size: 16px;
 }
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #fb9e74;
   border-radius: 50%;
   margin: auto;
   width: 20px;
@@ -95,10 +105,4 @@ button:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
-#results-div {
-  border: black 2px dotted;
-  margin-top: 4em;
-  margin-bottom: 2em;
-  font-size: large;
 }
