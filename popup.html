@@ -1,14 +1,14 @@
+<!-- popup.html -->
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>OTP Retiever</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>OTP fetcher extension</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <script src="scripts.js"></script>
     <div id="title-container">
       <img
         src="data/icons/glasses-svgrepo-com.png"
@@ -16,7 +16,7 @@
       />
       <span
         style="font-size: 14px; position: absolute; top: 2em; color: #584acc"
-        >OTP Retiever</span
+        >OTP fetcher</span
       >
     </div>
     <div
@@ -33,13 +33,18 @@
         <p id="accounts-info-container-p">Click below to fetch the OTPs</p>
 
         <div id="button-container" class="d-flex justify-content-around">
-          <button id="get-results-btn" class="btn btn-primary">
+          <button
+            style="display: none !important"
+            id="get-results-btn"
+            class="btn btn-primary"
+          >
             Fetch New OTPs
           </button>
-          <button id="logout-btn" class="btn btn-primary">Logout</button>
+          <!-- <button id="logout-btn" class="btn btn-primary">Logout</button> -->
         </div>
       </div>
       <div style="display: none" id="results-div"></div>
     </div>
+    <script src="popup.js"></script>
   </body>
 </html>

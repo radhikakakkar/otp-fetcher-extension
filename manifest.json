@@ -1,14 +1,40 @@
 {
-  "manifest_version": 2,
-  "name": "OTP-retriever",
-  "version": "0.1",
-  "author": "First Last",
-  "description": "This chrome extension allows for the easy retrieval of otp mails from your logged in gmail account",
-  "permissions": [""],
-  "browser_action": {
-    "default_icon": "data/icons/glasses-svgrepo-com.png",
-    "default_popup": "index.html",
-    "default_title": "A tooltip popup description when you hover over the Chrome Extension icon."
+  "manifest_version": 3,
+  "name": "otp-fetcher-extension",
+  "version": "1.0",
+  "description": "Interact with Gmail API",
+  "permissions": [
+    "scripting",
+    "identity",
+    "storage",
+    "activeTab",
+    "clipboardRead",
+    "https://mail.google.com/",
+    "https://www.googleapis.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "data/icons/glasses-svgrepo-com.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "run_at": "document_start",
+      "js": ["popup.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.js", "api.js", "client.js", "api_child.js"],
+      "matches": ["https://*/*"]
+    }
+  ],
+
+  "oauth2": {
+    "client_id": "822867916804-svueeuhrokaos6gphfm0h28vnc51qocj.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/gmail.readonly"]
   }
 }
-
