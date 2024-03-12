@@ -38,8 +38,8 @@ document.getElementById("connect-account-btn").onclick = async function () {
 
 //Google API interaction prerequisites for JS client side app
 
-const CLIENT_ID = "<Enter your chrome client id>";
-const API_KEY = "<Enter your API key>";
+const CLIENT_ID = "<Enter your oauth(chrome extension)client id>";
+const API_KEY = "<Enter your API key >";
 const DISCOVERY_DOC =
   "https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest";
 const SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"];
@@ -252,9 +252,8 @@ async function getEmails(auth) {
       date: "",
     }; //contains subject and OTP
     var current_id = ids.messages[i]["id"];
-    // console.log(current_id);
+
     const msg_url = `https://gmail.googleapis.com/gmail/v1/users/me/messages/${current_id}`;
-    // const msg_url = `https://gmail.googleapis.com/gmail/v1/users/me/messages/18e24953bb3fa20d`;
     const current_message = await fetch(msg_url, {
       method: "GET",
       headers: {

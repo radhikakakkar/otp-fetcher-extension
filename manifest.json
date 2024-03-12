@@ -34,7 +34,7 @@
   ],
 
   "oauth2": {
-    "client_id": "<Enter your chrome client id>",
+    "client_id": "<Enter your oauth(chrome extension)client id>",
     "scopes": ["https://www.googleapis.com/auth/gmail.readonly"]
   }
 }
