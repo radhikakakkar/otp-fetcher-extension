@@ -37,58 +37,12 @@ document.getElementById("connect-account-btn").onclick = async function () {
 };
 
 //Google API interaction prerequisites for JS client side app
-const CLIENT_ID =
-  "822867916804-mqu2m4m3sr9o8jujfcccao6ap3um6v10.apps.googleusercontent.com";
-const API_KEY = "AIzaSyAyww5-KpjRLrTR-If8Q3izYRfMO24dvqw";
+
+const CLIENT_ID = "<Enter your chrome client id>";
+const API_KEY = "<Enter your API key>";
 const DISCOVERY_DOC =
   "https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest";
 const SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"];
-
-// let gapiInited = false;
-// let gisInited = false;
-
-// function gapiLoaded() {
-//   // console.log("gapi called");
-//   gapi.load("client", initializeGapiClient);
-// }
-// async function initializeGapiClient() {
-//   await gapi.client.init({
-//     apiKey: API_KEY,
-//     discoveryDocs: [DISCOVERY_DOC],
-//   });
-
-//   gapiInited = true;
-//   maybeEnableButtons();
-// }
-// function maybeEnableButtons() {
-//   if (gapiInited && gisInited) {
-//     document.getElementById("get-results-btn").style.display = "block";
-//     // console.log("button enabled");
-//   }
-// }
-// async function gisLoaded() {
-//   // console.log("gisloaded called");
-//   // tokenClient = google.accounts.oauth2.initTokenClient({
-//   //   client_id: CLIENT_ID,
-//   //   scope: SCOPES,
-//   //   // callback: "", // defined later
-//   // });
-//   await chrome.storage.local.get(["user_auth_token"]).then((result) => {
-//     auth_token = result;
-//     console.log(auth_token["user_auth_token"]);
-//   });
-
-//   tokenClient = {
-//     client_id: CLIENT_ID,
-//     scope: SCOPES,
-//     // callback: "", // defined later
-//     token: auth_token["user_auth_token"],
-//   };
-//   // console.log(tokenClient.token);
-//   // console.log(tokenClient.scope);
-//   gisInited = true;
-//   maybeEnableButtons();
-// }
 
 async function injectCode(src, callback_func) {
   const script = document.createElement("script");
@@ -380,4 +334,52 @@ async function getEmails(auth) {
 //     "Labels:\n"
 //   );
 //   document.getElementById("get-results-btn").innerText = output;
+// }
+
+//js client interaction with gmail, was not working directly for chrome extensin client
+
+// let gapiInited = false;
+// let gisInited = false;
+
+// function gapiLoaded() {
+//   // console.log("gapi called");
+//   gapi.load("client", initializeGapiClient);
+// }
+// async function initializeGapiClient() {
+//   await gapi.client.init({
+//     apiKey: API_KEY,
+//     discoveryDocs: [DISCOVERY_DOC],
+//   });
+
+//   gapiInited = true;
+//   maybeEnableButtons();
+// }
+// function maybeEnableButtons() {
+//   if (gapiInited && gisInited) {
+//     document.getElementById("get-results-btn").style.display = "block";
+//     // console.log("button enabled");
+//   }
+// }
+// async function gisLoaded() {
+//   // console.log("gisloaded called");
+//   // tokenClient = google.accounts.oauth2.initTokenClient({
+//   //   client_id: CLIENT_ID,
+//   //   scope: SCOPES,
+//   //   // callback: "", // defined later
+//   // });
+//   await chrome.storage.local.get(["user_auth_token"]).then((result) => {
+//     auth_token = result;
+//     console.log(auth_token["user_auth_token"]);
+//   });
+
+//   tokenClient = {
+//     client_id: CLIENT_ID,
+//     scope: SCOPES,
+//     // callback: "", // defined later
+//     token: auth_token["user_auth_token"],
+//   };
+//   // console.log(tokenClient.token);
+//   // console.log(tokenClient.scope);
+//   gisInited = true;
+//   maybeEnableButtons();
 // }
